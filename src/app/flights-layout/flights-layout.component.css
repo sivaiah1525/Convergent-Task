@@ -1,0 +1,13 @@
+
+span{
+    background-color: blue;
+    color: white;
+    border-radius:50%;
+    padding:10px;
+}
+hr{
+  border:2px solid rgb(243, 247, 44);
+}
+.Modifybutton{
+    padding-left:70%;
+}

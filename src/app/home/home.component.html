@@ -1,0 +1,49 @@
+<!-- mainbody -->
+<section class="mainbody container mt-5">
+    <!-- One-WayRound-tripMulti-city -->
+    <div class="row pt-3 justify-content-center">
+        <div class="col-md-6">
+            <div class="row justify-content-start">
+                <div>
+                    <label class="travel-type-input"><input checked (click)='OneWaystatus($event)' type="radio" class="d-none travel-type-input"
+                            name="travelType">
+                        <span class="align-trip">One-Way</span>
+                    </label>
+                </div>
+                <div>
+                    <label class="travel-type-input"><input (click)='RoundTripstatus($event)' type="radio" class="d-none travel-type-input"
+                            name="travelType">
+                        <span class="align-trip">RoundTrip</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end One-WayRound-tripMulti-city -->
+    <div class="row padding-bottom justify-content-center">
+        <!-- origin,Destination -->
+        <div class="col-4 p-0 pl-3 pt-2">
+            <app-placeselect></app-placeselect>
+        </div>
+        <!-- end  ogigin,Destination -->
+
+        <!--Date Picker  -->
+        <div class="col-8">
+            <div class="row justify-content-start">
+                <div class="col-4 date-type">
+                    <app-datePicker [(date)]="userInputs.departureDate"></app-datePicker>
+                </div>
+                <div *ngIf='status===true' class="col-4 date-type-2">
+                    <app-datePicker></app-datePicker>
+                </div>
+                <!-- search -->
+                <div class="col-3 m-3">
+                    <button class="searchbutton" (click)="handleFlightSearch()"><i
+                            class="fas fa-search"></i><br><span>Search
+                            Flights</span></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

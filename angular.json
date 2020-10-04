@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "convergent-task": {
+    "jillako": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,18 +13,20 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/convergent-task",
+            "outputPath": "dist/jillako",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+            "aot": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
             "scripts": []
           },
@@ -41,6 +43,7 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
+              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -62,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "convergent-task:build"
+            "browserTarget": "jillako:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "convergent-task:build:production"
+              "browserTarget": "jillako:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "convergent-task:build"
+            "browserTarget": "jillako:build"
           }
         },
         "test": {
@@ -88,9 +91,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"
+            ]
           }
         },
         "lint": {
@@ -110,15 +116,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "convergent-task:serve"
+            "devServerTarget": "jillako:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "convergent-task:serve:production"
+              "devServerTarget": "jillako:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "convergent-task"
+  "defaultProject": "jillako"
 }

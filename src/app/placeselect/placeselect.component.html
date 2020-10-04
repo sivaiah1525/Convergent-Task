@@ -1,0 +1,18 @@
+<form [formGroup]='placeForm'>
+    <div class="input-group mb-2">
+        <div class="input-group-prepend ">
+            <span class="input-group-text" id="basic-addon1"><i class="fas fa-map-marker icon"></i></span>
+        </div>
+        <input type="text" class="form-control" formControlName="f-place"  placeholder="Origin" aria-label="Username"
+            aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-2 ">
+        <div class="input-group-prepend ">
+            <span class="input-group-text" id="basic-addon1"><i
+                    class="fas fa-tachometer-alt icon "></i></span>
+        </div>
+        <input type="text" class="form-control"  formControlName="l-place" placeholder="Destination" aria-label="Username"
+            aria-describedby="basic-addon1">
+    </div>
+    
+</form>

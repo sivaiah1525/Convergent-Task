@@ -1,0 +1,8 @@
+<div class="h-100  bg-white position-relative rounded-left-corner">
+    <input class="h-100 w-100 position-absolute" type="date" [valueAsDate]="selectedDate"
+        (input)="handleChange($event)" style="opacity: 0;">
+        <i class="fas fa-calendar-alt position-absolute ml-2 mt-2 dateicon bgcolor='blue'"></i>
+    <small class="d-inline-block text-center  w-100">{{selectedDate | date: 'MMMM'}}</small>
+    <span class="d-inline-block text-center font-size w-100">{{selectedDate | date: 'dd'}}</span>
+    <small class="d-inline-block text-center w-100">{{selectedDate | date: 'yyy'}}</small>
+</div>
